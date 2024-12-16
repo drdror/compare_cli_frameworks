@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "compare-cli-frameworks"
+version = "0.1.0"
+description = ""
+authors = ["Dror Atariah <drorata@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.13.1"
+click = "^8.1.7"
+fire = "^0.7.0"
+invoke = "^2.2.0"
+
+[tool.poetry.scripts]
+typer_example = "compare_cli_frameworks.typer_cli:app"
+click_example = "compare_cli_frameworks.click_cli:cli"
+fire_example = "compare_cli_frameworks.fire_cli:main"
+arg_example = "compare_cli_frameworks.argparse_cli:main"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
